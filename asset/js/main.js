@@ -103,8 +103,12 @@ const theArrey = [
 let iconcard = '';
 let color = '';
 
-for (let i = 0; i < theArrey.length; i++) {
+function cardPrinter() {
     
+}
+
+/* for (let i = 0; i < theArrey.length; i++) {
+
     if(theArrey[i].type == 'animal'){
         color = 'blue';
     }
@@ -123,11 +127,31 @@ for (let i = 0; i < theArrey.length; i++) {
     </div> 
     `;
     document.getElementById('icons-container').innerHTML = iconcard;
-}
+} */
 
 
 
+theArrey.forEach((item) => {
 
+    if(item.type == 'animal'){
+        color = 'blue';
+    }
+    else if(item.type == 'user'){
+        color = 'orange';   
+    }
+    else if(item.type == 'vegetable'){
+        color = 'purple';   
+    }
+
+    iconcard +=
+    `
+    <div class="box">
+        <i class="${item.family} ${item.prefix}${item.name}" style="color:${color}"></i>
+        <h6>${item.name.toUpperCase()}</h6>
+    </div> 
+    `;
+    document.getElementById('icons-container').innerHTML = iconcard;
+})
 
 
 
