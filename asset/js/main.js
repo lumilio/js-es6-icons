@@ -104,8 +104,38 @@ let iconcard = '';
 let color = '';
 
 function cardPrinter() {
-    
+
+    theArrey.forEach((item) => {
+
+        if(item.type == 'animal'){
+            color = 'blue';
+        }
+        else if(item.type == 'user'){
+            color = 'orange';   
+        }
+        else if(item.type == 'vegetable'){
+            color = 'purple';   
+        }
+
+        iconcard +=
+        `
+        <div class="box">
+            <i class="${item.family} ${item.prefix}${item.name}" style="color:${color}"></i>
+            <h6>${item.name.toUpperCase()}</h6>
+        </div> 
+        `;
+        document.getElementById('icons-container').innerHTML = iconcard;
+    }) 
 }
+
+cardPrinter();
+
+
+
+
+
+
+
 
 /* for (let i = 0; i < theArrey.length; i++) {
 
@@ -128,31 +158,3 @@ function cardPrinter() {
     `;
     document.getElementById('icons-container').innerHTML = iconcard;
 } */
-
-
-
-theArrey.forEach((item) => {
-
-    if(item.type == 'animal'){
-        color = 'blue';
-    }
-    else if(item.type == 'user'){
-        color = 'orange';   
-    }
-    else if(item.type == 'vegetable'){
-        color = 'purple';   
-    }
-
-    iconcard +=
-    `
-    <div class="box">
-        <i class="${item.family} ${item.prefix}${item.name}" style="color:${color}"></i>
-        <h6>${item.name.toUpperCase()}</h6>
-    </div> 
-    `;
-    document.getElementById('icons-container').innerHTML = iconcard;
-})
-
-
-
-
