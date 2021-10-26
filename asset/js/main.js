@@ -100,18 +100,19 @@ const theArrey = [
 
 
 
-let iconcard = '';
-let color = '';
+
+
 
 function cardPrinter() {
-    
+    let color = '';
+    let iconcard = '';
     const selector = document.getElementById('incon-selector');
     theArrey.forEach((item) => {
 
         if(selector.value == 'all'|| selector.value == item.type){
 
 
-            
+
             if(item.type == 'animal'){
                 color = 'blue';
             }
@@ -124,7 +125,7 @@ function cardPrinter() {
 
 
 
-
+            
             iconcard +=
             `
             <div class="box">
@@ -135,16 +136,16 @@ function cardPrinter() {
             document.getElementById('icons-container').innerHTML = iconcard;
 
 
-
-
-
         }   
     }) 
 }
 
+
+
 cardPrinter();
 
-
+const selector = document.getElementById('incon-selector');
+selector.addEventListener('change', cardPrinter);
 
 
 
