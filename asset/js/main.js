@@ -98,22 +98,13 @@ const theArrey = [
 ];
 
 
-/* const colors = [
-    'blue',
-    'orange',
-    'purple'
-]; */
-
-
-
 
 
 let iconcard = '';
+let color = '';
 
 for (let i = 0; i < theArrey.length; i++) {
-
-    let color = '';
-
+    
     if(theArrey[i].type == 'animal'){
         color = 'blue';
     }
