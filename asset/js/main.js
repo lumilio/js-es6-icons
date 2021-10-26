@@ -98,16 +98,13 @@ const theArrey = [
 ];
 
 
-
-
-
 let iconcard = '';
 for (let i = 0; i < theArrey.length; i++) {
     iconcard +=
     `
     <div class="box">
         <i class="${theArrey[i].family}  ${theArrey[i].prefix}${theArrey[i].name}"></i>
-        <h6>${theArrey[i].name}</h6>
+        <h6>${theArrey[i].name.toUpperCase()}</h6>
     </div> 
     `
 }
