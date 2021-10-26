@@ -106,8 +106,8 @@ for (let i = 0; i < theArrey.length; i++) {
     iconcard +=
     `
     <div class="box">
-        <i class="far fa-compass"></i>
-        <h6>zzzz</h6>
+        <i class="${theArrey[i].family}  ${theArrey[i].prefix}${theArrey[i].name}"></i>
+        <h6>${theArrey[i].name}</h6>
     </div> 
     `
 }
