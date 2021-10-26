@@ -98,18 +98,17 @@ const theArrey = [
 ];
 
 
-const colors = [
+/* const colors = [
     'blue',
     'orange',
     'purple'
-];
+]; */
+
+
+
+
 
 let iconcard = '';
-
-
-
-
-
 
 for (let i = 0; i < theArrey.length; i++) {
 
