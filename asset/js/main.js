@@ -114,20 +114,20 @@ for (let i = 0; i < theArrey.length; i++) {
 
     let color = '';
 
-    if(theArrey.type == 'animal'){
+    if(theArrey[i].type == 'animal'){
         color = 'blue';
     }
-    else if(theArrey.type == 'user'){
+    else if(theArrey[i].type == 'user'){
         color = 'orange';   
     }
-    else if(theArrey.type == 'vegetable'){
+    else if(theArrey[i].type == 'vegetable'){
         color = 'purple';   
     }
 
     iconcard +=
     `
     <div class="box">
-        <i class="color ${theArrey[i].type} ${theArrey[i].family} ${theArrey[i].prefix}${theArrey[i].name}"style="color:${color}"></i>
+        <i class="${theArrey[i].family} ${theArrey[i].prefix}${theArrey[i].name}" style="color:${color}"></i>
         <h6>${theArrey[i].name.toUpperCase()}</h6>
     </div> 
     `;
