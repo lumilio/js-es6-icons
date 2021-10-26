@@ -97,7 +97,19 @@ const theArrey = [
 	}
 ];
 
-theArrey.forEach((itemArrey, index, theArrey) => {
-const cardElement =
-    `div`
-})
+
+
+
+
+let iconcard = '';
+for (let i = 0; i < theArrey.length; i++) {
+    iconcard +=
+    `
+    <div class="box">
+        <i class="far fa-compass"></i>
+        <h6>zzzz</h6>
+    </div> 
+    `
+}
+
+document.getElementById('icons-container').innerHTML = iconcard;
