@@ -104,27 +104,41 @@ let iconcard = '';
 let color = '';
 
 function cardPrinter() {
-
+    
+    const selector = document.getElementById('incon-selector');
     theArrey.forEach((item) => {
 
-        if(item.type == 'animal'){
-            color = 'blue';
-        }
-        else if(item.type == 'user'){
-            color = 'orange';   
-        }
-        else if(item.type == 'vegetable'){
-            color = 'purple';   
-        }
+        if(selector.value == 'all'|| selector.value == item.type){
 
-        iconcard +=
-        `
-        <div class="box">
-            <i class="${item.family} ${item.prefix}${item.name}" style="color:${color}"></i>
-            <h6>${item.name.toUpperCase()}</h6>
-        </div> 
-        `;
-        document.getElementById('icons-container').innerHTML = iconcard;
+
+            
+            if(item.type == 'animal'){
+                color = 'blue';
+            }
+            else if(item.type == 'user'){
+                color = 'orange';   
+            }
+            else if(item.type == 'vegetable'){
+                color = 'purple';   
+            }
+
+
+
+
+            iconcard +=
+            `
+            <div class="box">
+                <i class="${item.family} ${item.prefix}${item.name}" style="color:${color}"></i>
+                <h6>${item.name.toUpperCase()}</h6>
+            </div> 
+            `;
+            document.getElementById('icons-container').innerHTML = iconcard;
+
+
+
+
+
+        }   
     }) 
 }
 
