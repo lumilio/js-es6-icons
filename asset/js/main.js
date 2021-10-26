@@ -103,10 +103,25 @@ for (let i = 0; i < theArrey.length; i++) {
     iconcard +=
     `
     <div class="box">
-        <i class="${theArrey[i].family}  ${theArrey[i].prefix}${theArrey[i].name}"></i>
+        <i class="${theArrey[i].type} ${theArrey[i].family}  ${theArrey[i].prefix}${theArrey[i].name}"></i>
         <h6>${theArrey[i].name.toUpperCase()}</h6>
     </div> 
     `
 }
 
 document.getElementById('icons-container').innerHTML = iconcard;
+
+
+
+
+if(theArrey.type = 'animal'){
+    theArrey.type = "text-primary";
+}
+else if(theArrey.type = 'user'){
+    theArrey.type = "text-danger";   
+}
+else if(theArrey.type = 'vegetable'){
+    theArrey.type = "text-success";   
+}
+
+
