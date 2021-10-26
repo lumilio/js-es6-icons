@@ -1,8 +1,12 @@
-
-.the-post{
-    width: 900px;
+.title img{
+    max-width: 250px;
 }
 
-.fa-thumbs-up{
-    font-size: 18px;
+#incon-selector{
+    margin-left: 20px;
+}
+
+.box{
+    width: 250px;
+    height: 125px;
 }
